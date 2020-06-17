@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 let fs = require("fs");
 let resolve = require("path").resolve
-let { transpile } = require("../lang/transpiler");
+let { transpile } = require("berlin-lang/transpiler");
 
 let [sourcePath, targetPath] = process.argv.slice(2);
 let sourceCode = fs.readFileSync(sourcePath, { encoding: "utf8"});
