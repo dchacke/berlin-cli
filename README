@@ -1,5 +1,23 @@
 # Berlin CLI
 
+## Description
+
+Command-line interface for the Berlin programming language. It is currently used only for transpilation (from Berlin to JavaScript).
+
+## Installation
+
+```bash
+$ npm install berlin-cli -g
+```
+
+## Usage
+
+```bash
+$ berlin input.berlin output.js
+```
+
+with `input.berlin` containing Berlin source code, and output.js being newly created by the CLI. If output.js already exists, it will be overwritten.
+
 ## ISC License
 
 Copyright 2020 Dennis Hackethal
