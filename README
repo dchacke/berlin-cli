@@ -2,7 +2,7 @@
 
 ## Description
 
-Command-line interface for the Berlin programming language. It is currently used only for transpilation (from Berlin to JavaScript).
+Command-line interface for the [Berlin programming language](https://github.com/dchacke/berlin-lang). It is currently used only for transpilation (from Berlin to JavaScript).
 
 ## Installation
 
