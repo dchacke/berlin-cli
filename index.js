@@ -12,5 +12,5 @@ fs.writeFile(targetPath, transpilation, err => {
     throw err;
   }
 
-  console.log(`Transpilation successful.\nWritten to ${resolve(targetPath)}`);
+  console.log(`Transpilation successfully written to ${resolve(targetPath)}`);
 });
