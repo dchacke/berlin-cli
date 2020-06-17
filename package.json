@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dennis Hackethal",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "bin": {
+    "berlin": "./index.js"
+  }
 }
