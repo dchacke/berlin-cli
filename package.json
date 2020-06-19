@@ -9,7 +9,7 @@
   "author": "Dennis Hackethal",
   "license": "ISC",
   "dependencies": {
-    "berlin-lang": "^0.1.13"
+    "berlin-lang": "^0.1.14"
   },
   "bin": {
     "berlin": "./index.js"
