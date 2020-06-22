@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "berlin-lang": "^0.1.29",
-    "prompt-sync": "^4.2.0"
+    "prompt-sync": "^4.2.0",
+    "prompt-sync-history": "^1.0.1"
   },
   "bin": {
     "berlin": "./index.js"

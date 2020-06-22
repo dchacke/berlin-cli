@@ -3,8 +3,11 @@ let fs = require("fs");
 let resolve = require("path").resolve
 let { transpile } = require("berlin-lang/transpiler");
 let core = require("berlin-lang/core");
-let vm = require('vm');
-let prompt = require('prompt-sync')({ sigint: true });
+let vm = require("vm");
+let prompt = require("prompt-sync")({
+  sigint: true,
+  history: require('prompt-sync-history')()
+});
 
 // The command was simply "berlin". We want to run
 // the repl.
@@ -12,10 +15,13 @@ if (process.argv.length <= 2) {
   const context = core;
   vm.createContext(context);
 
+  console.log("\nWelcome to Berlin. Type exit to leave.\n")
+
   while (true) {
     let input = prompt("berlin > ");
 
     if (input === "exit") {
+      prompt.history.save();
       break;
     }
 
