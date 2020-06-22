@@ -19,8 +19,12 @@ if (process.argv.length <= 2) {
       break;
     }
 
-    let result = vm.runInContext(transpile(input), context);
-    console.log(result);
+    try {
+      let result = vm.runInContext(transpile(input), context);
+      console.log(result);
+    } catch (e) {
+      console.log(e);
+    }
   }
 // The command was invoked with a source and target path.
 // We want to transpile.
