@@ -26,7 +26,7 @@ if (process.argv.length <= 2) {
 // We want to transpile.
 } else {
   let [sourcePath, targetPath] = process.argv.slice(2);
-  let sourceCode = fs.readFileSync(sourcePath, { encoding: "utf8"});
+  let sourceCode = fs.readFileSync(sourcePath, { encoding: "utf8" });
   let transpilation = transpile(sourceCode);
 
   fs.writeFile(targetPath, transpilation, err => {
