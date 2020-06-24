@@ -2,6 +2,7 @@
 let fs = require("fs");
 let resolve = require("path").resolve
 let { transpile } = require("berlin-lang/transpiler");
+let { lex } = require("berlin-lang/lexer");
 let core = require("berlin-lang/core");
 let vm = require("vm");
 let prompt = require("prompt-sync")({
@@ -17,19 +18,27 @@ if (process.argv.length <= 2) {
 
   console.log("\nWelcome to Berlin. Type exit to leave.\n")
 
-  while (true) {
-    let input = prompt("berlin > ");
+  let command = "";
 
-    if (input === "exit") {
+  while (true) {
+    let input = prompt(command.length ? "... " : "berlin > ");
+
+    if (input === "exit" && !command.length) {
       prompt.history.save();
       break;
     }
 
-    try {
-      let result = vm.runInContext(transpile(input), context);
-      console.log(result);
-    } catch (e) {
-      console.log(e);
+    command += input;
+
+    if (!lex(command).unclosedDelimiters.length) {
+      try {
+        let result = vm.runInContext(transpile(command), context);
+        console.log(result);
+      } catch (e) {
+        console.log(e);
+      } finally {
+        command = "";
+      }
     }
   }
 // The command was invoked with a source and target path.
