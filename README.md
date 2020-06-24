@@ -2,7 +2,7 @@
 
 ## Description
 
-Command-line interface for the [Berlin programming language](https://github.com/dchacke/berlin-lang). It is currently used only for transpilation (from Berlin to JavaScript).
+Command-line interface for the [Berlin programming language](https://github.com/dchacke/berlin-lang). It can be used to launch a Berlin REPL and for transpilation (from Berlin to JavaScript).
 
 ## Installation
 
@@ -11,6 +11,16 @@ $ npm install berlin-cli -g
 ```
 
 ## Usage
+
+### REPL
+
+Launch a Berlin REPL:
+
+```bash
+$ berlin
+```
+
+### Transpilation
 
 ```bash
 $ berlin input.berlin output.js
