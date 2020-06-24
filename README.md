@@ -26,7 +26,7 @@ $ berlin
 $ berlin input.berlin output.js
 ```
 
-with `input.berlin` containing Berlin source code, and `output.js` being newly created by the CLI. If output.js already exists, it will be overwritten.
+with `input.berlin` containing Berlin source code, and `output.js` being newly created by the CLI. If `output.js` already exists, it will be overwritten.
 
 ## ISC License
 
