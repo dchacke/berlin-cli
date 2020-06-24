@@ -35,7 +35,7 @@ if (process.argv.length <= 2) {
         let result = vm.runInContext(transpile(command), context);
         console.log(result);
       } catch (e) {
-        console.log(e);
+        console.log("Exception:", e);
       } finally {
         command = "";
       }
