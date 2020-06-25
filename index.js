@@ -10,9 +10,17 @@ let prompt = require("prompt-sync")({
   history: require('prompt-sync-history')()
 });
 
+let setTitle = title => {
+  process.stdout.write(
+    String.fromCharCode(27) + "]0;" + title + String.fromCharCode(7)
+  );
+};
+
 // The command was simply "berlin". We want to run
 // the repl.
 if (process.argv.length <= 2) {
+  setTitle("Berlin REPL");
+
   const context = core;
   vm.createContext(context);
 
@@ -44,6 +52,8 @@ if (process.argv.length <= 2) {
 // The command was invoked with a source and target path.
 // We want to transpile.
 } else {
+  setTitle("Transpiling Berlin...");
+
   let [sourcePath, targetPath] = process.argv.slice(2);
   let sourceCode = fs.readFileSync(sourcePath, { encoding: "utf8" });
   let transpilation = transpile(sourceCode);
