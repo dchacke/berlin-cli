@@ -1,6 +1,6 @@
 {
   "name": "berlin-cli",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "description": "Command-line interface for the Berlin programming language.",
   "main": "index.js",
   "scripts": {
