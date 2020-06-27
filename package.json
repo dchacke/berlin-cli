@@ -9,7 +9,7 @@
   "author": "Dennis Hackethal",
   "license": "ISC",
   "dependencies": {
-    "berlin-lang": "^0.1.36",
+    "berlin-lang": "^0.1.37",
     "prompt-sync": "^4.2.0",
     "prompt-sync-history": "^1.0.1"
   },
