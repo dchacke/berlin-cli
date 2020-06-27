@@ -36,7 +36,7 @@ if (process.argv.length <= 2) {
       break;
     }
 
-    command += input;
+    command += "\n" + input;
 
     if (!lex(command).unclosedDelimiters.length) {
       try {
